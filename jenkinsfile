@@ -1,0 +1,21 @@
+pipeline{
+    agent any
+        stage("compile"){
+            steps{
+            bat "mvn clean compile"
+            }
+        }
+
+         stage("package"){
+            steps{
+            bat "mvn package"
+            }
+        }
+       stage("docker build"){
+                   steps{
+                   bat "docker build -t kube-jenkins-app:${BUILD_NUMBER} ."
+                   }
+               }
+        }
+
+}
