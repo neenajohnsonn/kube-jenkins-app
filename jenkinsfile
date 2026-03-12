@@ -1,11 +1,11 @@
 pipeline {
     agent any
-    
-    tools {
-        jdk 'jdk21'
-        maven 'Maven3'
-    }
-
+     stages{
+        stage("checkout"){
+            steps{
+             git "https://github.com/neenajohnsonn/kube-jenkins-app.git"
+            }
+        }
     stages {
 
         stage("compile") {
