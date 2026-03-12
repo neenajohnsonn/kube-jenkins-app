@@ -4,8 +4,8 @@ pipeline{
 
     tools {
 
-            jdk 'java25'   // matches the name you configured in Jenkins
-            maven 'maven' // if you configured Maven in Jenkins too
+            jdk 'java25'
+            maven 'maven' 
 
         }
 
