@@ -1,7 +1,7 @@
 pipeline{
     agent any
     stages{
-        stage("clone"){
+        stage("checkout"){
             steps{
              git "https://github.com/neenajohnsonn/kube-jenkins-app.git"
             }
