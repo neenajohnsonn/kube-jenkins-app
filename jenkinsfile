@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("clone"){
             steps{
-             bat "git clone https://github.com/neenajohnsonn/kube-jenkins-app.git"
+             git "https://github.com/neenajohnsonn/kube-jenkins-app.git"
             }
         }
         stage("compile"){
