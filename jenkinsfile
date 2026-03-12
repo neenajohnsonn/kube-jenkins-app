@@ -1,12 +1,12 @@
 pipeline {
     agent any
-     stages{
-        stage("checkout"){
-            steps{
-             git "https://github.com/neenajohnsonn/kube-jenkins-app.git"
+
+    stages {
+        stage("checkout") {
+            steps {
+                git "https://github.com/neenajohnsonn/kube-jenkins-app.git"
             }
         }
-    stages {
 
         stage("compile") {
             steps {
@@ -22,7 +22,7 @@ pipeline {
 
         stage("docker build") {
             steps {
-                bat "docker build -t kube-jenkins-app:%BUILD_NUMBER% ."
+                bat "docker build -t kube-jenkins-app:${env.BUILD_NUMBER} ."
             }
         }
     }
