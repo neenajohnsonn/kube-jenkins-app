@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("checkout"){
             steps{
-             git "https://github.com/sbtalk71/kube-jenkins-app.git"
+             git "https://github.com/neenajohnsonn/kube-jenkins-app.git"
             }
         }
         stage("compile"){
